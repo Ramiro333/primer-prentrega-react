@@ -6,7 +6,7 @@
         "description": "lorem impsum lorem impsum lorem impsum lorem impsum ",
         "color":["red","white"],
         "image": "https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/9e8ccbf3-1e5f-4408-ada1-57b8417daa5e/fecha-de-lanzamiento-del-air-jordan-7-white-infrared-cu9307-160.jpg",
-        "category":"Jordan",
+        "category":"jordan",
         "stock":10
     },
     {
@@ -16,7 +16,7 @@
         "description": "lorem impsum lorem impsum lorem impsum lorem impsum ",
         "color":["black","gray"],
         "image": "https://assets.adidas.com/images/w_600,f_auto,q_auto/9a5b9d63cc9c42939a44ae920127cb49_9366/Zapatillas_adi2000_Negro_GX4634_01_standard.jpg",
-        "category":"Adidas",
+        "category":"adidas",
         "stock":10
     },
     {
@@ -26,7 +26,7 @@
         "description": "lorem impsum lorem impsum lorem impsum lorem impsum ",
         "color":["white","green"],
         "image": "https://acdn.mitiendanube.com/stores/002/342/995/products/white-1-11-c7b77a449bba07de1e16630953551452-1024-1024.png",
-        "category":"New Balance",
+        "category":"new-balance",
         "stock":10
     },
     {
