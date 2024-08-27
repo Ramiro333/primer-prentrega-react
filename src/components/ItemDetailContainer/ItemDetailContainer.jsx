@@ -1,7 +1,8 @@
 import { useState,useEffect } from "react"
 import ItemDetail from "../ItemaDetail/ItemDetail"
-import { useParams } from "react-router-dom";
-import Spinner from "../Spinner/Spinner";
+import { useParams } from "react-router-dom"
+import Spinner from "../Spinner/Spinner"
+import "./ItemDetailContainer.css"
 const ItemDetailContainer = () => {
     const[product,setProduct]= useState(null);
     const {id} = useParams();
@@ -18,9 +19,8 @@ const ItemDetailContainer = () => {
         }
         fetchData();
     },[id]);
-    console.log(id)
     return (
-        <div>
+        <div className="container-item-detail">
             {!product ? <Spinner/> : <ItemDetail product={product}/>}
             
         </div>

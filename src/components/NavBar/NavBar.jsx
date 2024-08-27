@@ -11,7 +11,7 @@ const NavBar = ()=>{
             <div className="navegacion-a">
                 <ul className="navegacion-ul">
                     <li>
-                        <Link to="/category/jordan" className="navegacion-a">Jordan</Link>
+                        <Link to="/category/nike" className="navegacion-a">Nike/Jordan</Link>
                     </li>
                     <li>
                         <Link to="/category/new-balance" className="navegacion-a">New Balance</Link>

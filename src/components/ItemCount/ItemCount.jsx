@@ -1,5 +1,5 @@
 import { useState } from "react"
-const ContadorSec = ({stock},) => {
+const ContadorSec = ({stock}) => {
     const[Contador,setContador]=useState(1)
 
 
@@ -9,7 +9,8 @@ const ContadorSec = ({stock},) => {
       }
     }
     const handleDecrement = () =>{
-      if(Contador>stock){
+      console.log(stock)
+      if(Contador!=0 && Contador<=stock){
         setContador(Contador-1)
       }
     }
@@ -19,7 +20,7 @@ const ContadorSec = ({stock},) => {
 
   return (
     <div>
-            <p>{Contador}</p>
+      <p>{Contador}</p>
       <button onClick={handleIncrement}>INCREMENTAR</button>
       <button onClick={handleDecrement}>decrementar</button>
       <button onClick={agregarCarrito}>agregar al carrito</button>

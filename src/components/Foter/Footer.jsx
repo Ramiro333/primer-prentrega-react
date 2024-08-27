@@ -1,9 +1,9 @@
-
+import "./Footer.css"
 
 const Footer = () => {
   return (
 <>
-<h2>chau</h2>
+<h2 className="footer">Footer graphic desing is my passion</h2>
 </>
   )
 }
