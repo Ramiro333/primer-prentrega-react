@@ -4,9 +4,9 @@ import { useContext } from "react";
 import {CartContext} from "../../context/CartContext/CartProvider";
 import { Link } from "react-router-dom";
 const ItemDetail = ({product}) => {
-    const {addItems} = useContext(CartContext)
+    const {isInCart} = useContext(CartContext)
     const onAdd = (quantity) => {
-        addItems(product, quantity)
+        isInCart(product.id, product, quantity)
     };
 return (
     <div className="container-detail">

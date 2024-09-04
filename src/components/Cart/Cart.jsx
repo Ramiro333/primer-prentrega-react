@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../../context/CartContext/CartProvider'
 const Cart = () => {
-    const {cart} = useContext(CartContext);
+    const {removeItems,clearCart,cart} = useContext(CartContext)
     console.log(cart)
   return (
     <div>
@@ -13,8 +13,10 @@ const Cart = () => {
                     <div key={item.product.id}>
                         <p>{item.product.name}</p>
                         <p>{item.quantity}</p>
+                        <button onClick={() => removeItems(item.product.id)}> eliminar producto</button>
                     </div>
                 ))}
+                <button onClick={()=> clearCart()}>eliminar todo el carrito</button>
             </>
         )}
     </div>
