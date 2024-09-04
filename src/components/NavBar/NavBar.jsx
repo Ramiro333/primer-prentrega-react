@@ -11,16 +11,16 @@ const NavBar = ()=>{
             <div className="navegacion-a">
                 <ul className="navegacion-ul">
                     <li>
-                        <Link to="/category/nike" className="navegacion-a">Nike/Jordan</Link>
+                        <NavLink to="/category/nike" className="navegacion-a" activeClassname="active">Nike/Jordan</NavLink>
                     </li>
                     <li>
-                        <Link to="/category/new-balance" className="navegacion-a">New Balance</Link>
+                        <NavLink to="/category/new-balance" className="navegacion-a" activeClassname="active">New Balance</NavLink>
                     </li>
                     <li>
-                        <Link to="/category/adidas" className="navegacion-a">Adidas</Link>
+                        <NavLink to="/category/adidas" className="navegacion-a" activeClassname="active">Adidas</NavLink>
                     </li>
                     <li>
-                        <Link to="/category/fila" className="navegacion-a">Fila</Link>
+                        <NavLink to="/category/fila" className="navegacion-a" activeClassname="active">Fila</NavLink>
                     </li>
                 </ul>
             </div>
