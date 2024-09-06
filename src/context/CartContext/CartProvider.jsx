@@ -21,16 +21,15 @@ const CartProvider = ({children}) => {
         setCart([])
     }
     const getTotal = () => {
-        const productsQuantity = cart.reduce((acumulador,item)=>acumulador+item.quantity,0)
+        const productsQuantity = cart.reduce((acc,item)=>acc+item.quantity,0)
         return productsQuantity
         
     }
-    const getAllProducts = () =>{
-
+    const getAllProductsPrice = () =>{
+        return cart.reduce((total,item)=> total+item.product.price * item.quantity,0);
     }
-    {console.log(cart)}
     return (
-        <CartContext.Provider value={{cart,addItems,isInCart,clearCart,removeItems,getAllProducts,getTotal}}>
+        <CartContext.Provider value={{cart,addItems,isInCart,clearCart,removeItems,getAllProductsPrice,getTotal}}>
             {children}
         </CartContext.Provider>
     );

@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../../context/CartContext/CartProvider'
 const Cart = () => {
-    const {removeItems,clearCart,cart} = useContext(CartContext)
+    const {removeItems,clearCart,cart,getAllProductsPrice} = useContext(CartContext)
     console.log(cart)
-  return (
+return (
     <div>
         {cart.length === 0 ? (
             <p>no hay productos en el carrito</p>
@@ -17,10 +17,11 @@ const Cart = () => {
                     </div>
                 ))}
                 <button onClick={()=> clearCart()}>eliminar todo el carrito</button>
+                <h3>Total a pagar: {getAllProductsPrice()}</h3>
             </>
         )}
     </div>
-  );
+);
 };
 
 export default Cart
