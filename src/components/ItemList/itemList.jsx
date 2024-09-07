@@ -1,11 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Item from '../item/item'
 import './itemList.css'
-const itemList = ({products}) => {
-
+const itemList = ({productos}) => {
     return (
         <div className='card-container'>
-            {products.map((item)=>(
+            {productos.map((item)=>(
                 <Item key={item.id} item={item}/>
             ))}
         </div>
