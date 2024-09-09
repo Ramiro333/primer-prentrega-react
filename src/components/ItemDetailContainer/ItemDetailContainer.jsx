@@ -20,7 +20,6 @@ const ItemDetailContainer = () => {
         }
         fetchData();
     },[id]);
-    console.log(products)
     return (
         <div className="container-item-detail">
             {!product ? <Spinner/> : <ItemDetail product={product}/>}

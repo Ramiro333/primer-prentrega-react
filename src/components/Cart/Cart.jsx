@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../../context/CartContext/CartProvider'
+import { Link } from 'react-router-dom';
 const Cart = () => {
     const {removeItems,clearCart,cart,getAllProductsPrice} = useContext(CartContext)
-    console.log(cart)
 return (
     <div>
         {cart.length === 0 ? (
@@ -17,6 +17,9 @@ return (
                     </div>
                 ))}
                 <button onClick={()=> clearCart()}>eliminar todo el carrito</button>
+                <button>
+                    <Link to={"/checkout"}>comprar</Link>
+                </button>
                 <h3>Total a pagar: {getAllProductsPrice()}</h3>
             </>
         )}
