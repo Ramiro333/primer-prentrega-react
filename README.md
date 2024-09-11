@@ -1,4 +1,4 @@
-# Clean Soles - Tienda de Zapatillas de Alta Gama
+# Clean Soles - Tienda de Zapatillas 
 
 ## Descripción
 
