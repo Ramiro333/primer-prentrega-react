@@ -11,6 +11,9 @@ const NavBar = ()=>{
             <div className="navegacion-a">
                 <ul className="navegacion-ul">
                     <li>
+                        <NavLink to="/productos" className={({isActive})=> (isActive ? "navegacion-a active":"navegacion-a" )}>Todos Los productos</NavLink>
+                    </li>
+                    <li>
                         <NavLink to="/category/nike" className={({isActive})=> (isActive ? "navegacion-a active":"navegacion-a" )}>Nike/Jordan</NavLink>
                     </li>
                     <li>

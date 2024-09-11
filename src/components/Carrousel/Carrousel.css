@@ -1,0 +1,41 @@
+.img-carrousel img {
+    width: 400px;
+    height: 400px;
+}
+
+.img-carrousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.slick-prev,
+.slick-next {
+    opacity: 1;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
+    width: 30px;
+    height: 30px;
+}
+
+slick-prev:hover,
+.slick-next:hover {
+    opacity: 1 !important;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: black;
+    font-size: 40px;
+}
+
+.slick-prev {
+    left: 30px;
+}
+
+.slick-next {
+    right: 30px;
+}

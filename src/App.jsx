@@ -11,10 +11,9 @@ import ThemeProvider from './context/ThemeContext/ThemeProvider'
 import { CartProvider } from './context/CartContext/CartProvider'
 import Cart from './components/Cart/Cart'
 import { db } from './main'
-// import { doc, getDoc, getFirestore } from 'firebase/firestore'
-import { getFirestore, collection, getDocs,query,where, QuerySnapshot } from 'firebase/firestore'
 import { ProductosProvider } from './context/ProductsContext/ProductsProvider'
 import Checkout from './components/Checkout/Checkout'
+import MainPage from './MainPage'
 const App = () => {
   return (
   <>
@@ -24,7 +23,8 @@ const App = () => {
           <BrowserRouter>
             <NavBar/>
               <Routes>
-                <Route path='/' element={<ItemListContainer/>}/>
+              <Route path='/' element={<MainPage/>}/>
+                <Route path='/productos' element={<ItemListContainer/>}/>
                 <Route path='/cart' element={<Cart/>} />
                 <Route path='/category/:prodId' element={<ItemListContainer/>} />
                 <Route path='/item/:id' element={<ItemDetailContainer/>} />

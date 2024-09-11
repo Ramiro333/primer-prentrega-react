@@ -6,7 +6,10 @@ const Cart = () => {
 return (
     <div>
         {cart.length === 0 ? (
-            <p>no hay productos en el carrito</p>
+            <div>
+                <p>no hay productos en el carrito</p>
+                <Link to={"/productos"} >quiero ver las suelas</Link>
+            </div>
         ) : (
             <>
                 {cart.map((item) => (
