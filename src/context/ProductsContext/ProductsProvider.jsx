@@ -12,19 +12,16 @@ const ProductosProvider = ({children}) => {
         }
         setProducts(querySnapshot.docs.map((doc)=> ({id:doc.id, ...doc.data()})))
     })
-      // .collection("products")
-      // .where("price", ">=", 150)
-      // .orderBy("price", "desc")
-
-      // const productsCollection = collection(db,"products")
-      // getDocs(productsCollection).then((snapshot)=>{
-      //   setProducts(snapshot.docs.map((doc)=>(
-      //     {id:doc.id,...doc.data()}
-      //   )))
-      // })
     },[]);
+    const updateProductStock = (productId, newStock) => {
+      setProducts(prevProducts =>
+          prevProducts.map(product =>
+              product.id === productId ? { ...product, stock: newStock } : product
+          )
+      );
+  };
 return (
-  <ProductosContext.Provider value={{products}}>
+  <ProductosContext.Provider value={{products,updateProductStock}}>
       {children}
   </ProductosContext.Provider>
 );

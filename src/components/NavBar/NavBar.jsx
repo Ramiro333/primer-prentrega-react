@@ -11,16 +11,16 @@ const NavBar = ()=>{
             <div className="navegacion-a">
                 <ul className="navegacion-ul">
                     <li>
-                        <NavLink to="/category/nike" className="navegacion-a" activeClassname="active">Nike/Jordan</NavLink>
+                        <NavLink to="/category/nike" className={({isActive})=> (isActive ? "navegacion-a active":"navegacion-a" )}>Nike/Jordan</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/category/new-balance" className="navegacion-a" activeClassname="active">New Balance</NavLink>
+                        <NavLink to="/category/new-balance" className={({isActive})=> (isActive ? "navegacion-a active":"navegacion-a" )}>New Balance</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/category/adidas" className="navegacion-a" activeClassname="active">Adidas</NavLink>
+                        <NavLink to="/category/adidas" className={({isActive})=> (isActive ? "navegacion-a active":"navegacion-a" )}>Adidas</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/category/fila" className="navegacion-a" activeClassname="active">Fila</NavLink>
+                        <NavLink to="/category/fila" className={({isActive})=> (isActive ? "navegacion-a active":"navegacion-a" )}>Fila</NavLink>
                     </li>
                 </ul>
             </div>

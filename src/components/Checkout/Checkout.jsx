@@ -1,6 +1,7 @@
 import {useState,useContext} from 'react'
 import { CartContext } from '../../context/CartContext/CartProvider'
 import { getFirestore,collection,addDoc,updateDoc,doc,getDoc } from 'firebase/firestore'
+import { ProductosContext } from "../../context/ProductsContext/ProductsProvider"
 // import { db } from './main'
 
 const Checkout = () => {
@@ -12,6 +13,7 @@ const Checkout = () => {
     const [emailConfirmacion, setEmailConfirmacion] = useState("");
     const [error, setError] = useState("");
     const [orderId, setOrderId] = useState("");
+    const {updateProductStock} = useContext(ProductosContext)
     const handleForm = (e)=>{
         e.preventDefault();
         if(!nombre ||!apellido||!celular||!email||!emailConfirmacion){
@@ -35,16 +37,15 @@ const Checkout = () => {
             date: new Date(),
             nombre,apellido,celular,email
         };
-        console.log(order)
         Promise.all(
             order.items.map(async (productOrder)=>{
                 const productRef = doc(db, "products", productOrder.id);
                 const productDoc = await getDoc(productRef);
                 const stock = productDoc.data().stock;
-                console.log(productDoc.data())
                 await updateDoc(productRef,{
                     stock: stock - productOrder.quantity,
                 })
+                updateProductStock(productOrder.id,stock - productOrder.quantity )
             })
         ).then(()=> {
             addDoc(collection(db,"orders"),order)

@@ -3,6 +3,7 @@ const CartContext = createContext();
 const CartProvider = ({children}) => {
     const [cart, setCart] = useState([]);
     const addItems = (product, quantity)=>{
+        //logica de no agregar de mas
         setCart([...cart, {product,quantity}])
     }
     const removeItems = (itemId) => {
