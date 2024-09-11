@@ -1,4 +1,3 @@
-import React, { useContext } from 'react'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -14,12 +13,11 @@ function Carrousel(products) {
         arrows: true,
         dots: true
     };
-    console.log(products.products)
     return (
         <div className="slider-container">
             <Slider {...settings}>
                 {products.products.slice(0, 6).map((product) => (
-                    <div key={products.id}>
+                    <div key={product.id}>
                         <img src={product.image} alt={product.name} />
                         <Link to={`/item/${product.id}`}>
                         ir al producto

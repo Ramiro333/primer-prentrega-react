@@ -22,8 +22,9 @@ return (
             <div style={{backgroundColor: product.color[1]}} className="colores"></div>
         </div>
         <p>Marca: {product.category}</p>
-        {<ContadorSec initial={1} stock={product.stock }onAdd={onAdd} />}
+        {product.stock===0? <p>lo sentimos, no tenemos stock disponible de este producto</p> :<ContadorSec initial={1} stock={product.stock }onAdd={onAdd} />}
         {cart.length===0 ? null:<Link to="/cart">terminar mi compra/ir al carrito</Link>}
+
     </div>
 )
 }

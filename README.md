@@ -29,6 +29,8 @@ Existe el contexto de ThemeProvider, que decidí no quitar del código aunque ac
 
 El carrusel lo implementé principalmente para practicar más el uso de JavaScript, CSS y HTML en el mismo documento, componentes, rutas, APIs (aunque esta no es la más linda de todas...). Antes de mapear los productos, contiene un método slice para mostrar solo los primeros productos del array, porque si tengo 90 productos no quiero que se muestren todos.
 
+Aun me quedan algunos filtros y detalles que mejorar que lo voy a estar haciendo en estos dias, mas entrego hoy 11/09 para tener margen para mejorar y no entregar en la fecha limite, aun asi considero que hasta este commit, la aplicacion satisface los criterios de evaluacion.
+
 Sin más que añadir, quiero resaltar que de los 3 cursos que llevo en Coder, este ha sido el mejor en cuanto a la forma de explicar y transmitir el conocimiento. La facilidad con la que el profesor hizo que entendiera los temas es admirable, y sin duda volveré a ver las clases para seguir aprendiendo. También quiero destacar el trabajo de los tutores, que han sido atentos y acertados en los tiempos, comentarios y correcciones. Ha sido un placer trabajar con ustedes.
 
 P.D.: ¡Por favor, no se fijen en la estética! Soy malísimo diseñando.

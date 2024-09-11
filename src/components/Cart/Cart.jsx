@@ -15,6 +15,7 @@ return (
                 {cart.map((item) => (
                     <div key={item.product.id}>
                         <p>{item.product.name}</p>
+                        
                         <p>{item.quantity}</p>
                         <button onClick={() => removeItems(item.product.id)}> eliminar producto</button>
                     </div>

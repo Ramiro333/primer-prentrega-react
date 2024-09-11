@@ -2,7 +2,6 @@ import {useState,useContext} from 'react'
 import { CartContext } from '../../context/CartContext/CartProvider'
 import { getFirestore,collection,addDoc,updateDoc,doc,getDoc } from 'firebase/firestore'
 import { ProductosContext } from "../../context/ProductsContext/ProductsProvider"
-// import { db } from './main'
 
 const Checkout = () => {
     const {cart, getTotal,getAllProductsPrice, clearCart}= useContext(CartContext)
@@ -17,11 +16,11 @@ const Checkout = () => {
     const handleForm = (e)=>{
         e.preventDefault();
         if(!nombre ||!apellido||!celular||!email||!emailConfirmacion){
-            setError("porfavor completa todos los campos wachin");
+            setError("porfavor completa todos los campos");
             return;
         }
         if(email !==emailConfirmacion){
-            setError("los emails son diferentes wachin");
+            setError("los emails son diferentes");
             return;
         }
         const db = getFirestore()
@@ -71,7 +70,7 @@ return (
         {cart.map((product) => (
         <div key={product.product.id}>
             <p>{""} {product.product.name}</p>
-            <p>{product.product.price}</p>
+            <p>{product.product.price*product.quantity}</p>
             <hr />
         </div>
         ))}

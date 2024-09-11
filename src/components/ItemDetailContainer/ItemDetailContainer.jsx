@@ -19,10 +19,10 @@ const ItemDetailContainer = () => {
             }
         }
         fetchData();
-    },[id]);
+    },[id,products]);
     return (
         <div className="container-item-detail">
-            {!product ? <Spinner/> : <ItemDetail product={product}/>}
+            {!product ? <Spinner /> : <ItemDetail product={product} />}
             
         </div>
     )
