@@ -1,8 +1,8 @@
 import {useContext }from 'react'
 import { Link } from 'react-router-dom'
-import Carrousel from './components/Carrousel/Carrousel'
-import { ProductosContext } from './context/ProductsContext/ProductsProvider'
-import Spinner from './components/Spinner/Spinner'
+import Carrousel from '../Carrousel/Carrousel'
+import { ProductosContext } from '../../context/ProductsContext/ProductsProvider'
+import Spinner from '../Spinner/Spinner'
 const MainPage = () => {
     const {products} = useContext(ProductosContext)
     return (

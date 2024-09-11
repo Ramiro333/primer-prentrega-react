@@ -13,7 +13,7 @@ import Cart from './components/Cart/Cart'
 import { db } from './main'
 import { ProductosProvider } from './context/ProductsContext/ProductsProvider'
 import Checkout from './components/Checkout/Checkout'
-import MainPage from './MainPage'
+import MainPage from './components/MainPage/MainPage'
 const App = () => {
   return (
   <>
