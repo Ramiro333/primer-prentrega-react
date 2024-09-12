@@ -7,7 +7,7 @@ function Carrousel(products) {
     const settings = {
         className: "img-carrousel",
         infinite: true,
-        slidesToShow: 2,
+        slidesToShow: 3,
         slidesToScroll: 1,
         speed: 500,
         arrows: true,
@@ -17,11 +17,14 @@ function Carrousel(products) {
         <div className="slider-container">
             <Slider {...settings}>
                 {products.products.slice(0, 6).map((product) => (
-                    <div key={product.id}>
+                    <div key={product.id} className="contenedor-producto-carrousel">
+                        <h3>{product.name}</h3>
                         <img src={product.image} alt={product.name} />
-                        <Link to={`/item/${product.id}`}>
-                        ir al producto
-                        </Link>
+                        <div className="link-producto">
+                            <Link to={`/item/${product.id}` }>
+                                <button className="boton-producto">ir al producto</button>
+                            </Link>
+                        </div>
                     </div>
                 ))}
             </Slider>

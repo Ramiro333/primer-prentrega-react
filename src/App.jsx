@@ -14,7 +14,14 @@ import { db } from './main'
 import { ProductosProvider } from './context/ProductsContext/ProductsProvider'
 import Checkout from './components/Checkout/Checkout'
 import MainPage from './components/MainPage/MainPage'
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
+
 const App = () => {
+  const notify = () => {
+    toast("¡Notificación!");
+  };
   return (
   <>
     <ThemeProvider>
@@ -32,6 +39,7 @@ const App = () => {
                 <Route path='*' element={<Error/>} /> 
               </Routes>
             <Footer/>
+            <ToastContainer />
           </BrowserRouter>
         </ProductosProvider>
       </CartProvider>

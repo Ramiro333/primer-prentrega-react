@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { toast } from 'react-toastify';
 const ContadorSec = ({initial, stock, onAdd}) => {
     const[Contador,setContador]=useState(initial)
     const handleIncrement = () => {

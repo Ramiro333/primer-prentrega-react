@@ -3,10 +3,12 @@ import ContadorSec from "../ItemCount/ItemCount"
 import { useContext } from "react";
 import {CartContext} from "../../context/CartContext/CartProvider";
 import { Link } from "react-router-dom";
+import { toast } from 'react-toastify';
 const ItemDetail = ({product}) => {
     const {isInCart,cart} = useContext(CartContext)
     const onAdd = (quantity) => {
-        isInCart(product.id, product, quantity)
+        isInCart(product.id, product, quantity);
+        toast.success('¡Producto añadido al carrito!');
     };
 
 return (
